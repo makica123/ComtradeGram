@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0754276C1FCB5A7500E5EA79 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0754276B1FCB5A7500E5EA79 /* ProfileViewController.swift */; };
 		7B09F2421E68C8F700C8774B /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B09F2411E68C8F700C8774B /* APIService.swift */; };
 		7B4DA3571E6B9DB4008CFF8A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4DA3561E6B9DB4008CFF8A /* Extensions.swift */; };
 		7BD171381E6782130012FF66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD171371E6782130012FF66 /* AppDelegate.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0754276B1FCB5A7500E5EA79 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		7B09F2411E68C8F700C8774B /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		7B4DA3561E6B9DB4008CFF8A /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		7BD171341E6782130012FF66 /* CoreDataTutorialPart1Final.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataTutorialPart1Final.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,6 +103,7 @@
 		7BD1714E1E6782620012FF66 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				0754276B1FCB5A7500E5EA79 /* ProfileViewController.swift */,
 				7BD1714F1E6782750012FF66 /* PhotoVC.swift */,
 			);
 			name = Controller;
@@ -182,6 +185,7 @@
 				7B4DA3571E6B9DB4008CFF8A /* Extensions.swift in Sources */,
 				7BD171561E6792420012FF66 /* Photo+CoreDataProperties.swift in Sources */,
 				7BD171551E6792420012FF66 /* Photo+CoreDataClass.swift in Sources */,
+				0754276C1FCB5A7500E5EA79 /* ProfileViewController.swift in Sources */,
 				7BD171521E6782800012FF66 /* PhotoCell.swift in Sources */,
 				7BD171381E6782130012FF66 /* AppDelegate.swift in Sources */,
 				7BD171401E6782130012FF66 /* CoreDataTutorialPart1Final.xcdatamodeld in Sources */,
