@@ -25,6 +25,7 @@ class APIService: NSObject {
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             
          guard error == nil else { return completion(.Error(error!.localizedDescription)) }
+            
             guard let data = data else { return completion(.Error(error?.localizedDescription ?? "There are no new Items to show"))
 }
             do {

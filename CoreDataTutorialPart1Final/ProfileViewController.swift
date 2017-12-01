@@ -15,6 +15,8 @@ class ProfileViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         self.title = "Profile"
+        
+        self.view.backgroundColor = UIColor.lightGray
     }
 
     override func didReceiveMemoryWarning() {
