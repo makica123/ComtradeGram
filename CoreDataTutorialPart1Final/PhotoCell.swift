@@ -12,7 +12,10 @@ import UIKit
 
 class PhotoCell: UITableViewCell {
     
+    let imageBtn = UIImage(named: "srculence") as! UIImage
+    let imageBtn1 = UIImage(named:"srculence1") as! UIImage
     
+    var favoriteBttn: UIButton!
     let photoImageview: UIImageView = {
         let iv = UIImageView()
         iv.contentMode = .scaleAspectFill
@@ -58,10 +61,20 @@ class PhotoCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         isUserInteractionEnabled = false
         
+        self.favoriteBttn = UIButton.init(frame: CGRect.init(x: 5, y:270, width: 40, height: 40))
+        self.favoriteBttn.setTitle("M", for: UIControlState.normal)
+        self.favoriteBttn.backgroundColor = UIColor.white
+        self.favoriteBttn.layer.cornerRadius = 5
+        self.favoriteBttn.setImage(imageBtn, for: UIControlState.normal)
+        self.favoriteBttn.setImage(imageBtn1, for: UIControlState.selected)
+        
+    
         addSubview(photoImageview)
         addSubview(authorLabel)
         addSubview(tagsLabel)
         addSubview(dividerLineView)
+        addSubview(self.favoriteBttn)
+        
         
         photoImageview.topAnchor.constraint(equalTo: topAnchor).isActive = true
         photoImageview.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
@@ -99,6 +112,7 @@ class PhotoCell: UITableViewCell {
             }
         }
     }
-}
+    
 
+    }
 

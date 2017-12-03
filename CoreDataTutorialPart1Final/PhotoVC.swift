@@ -14,6 +14,7 @@ import CoreData
 class PhotoVC: UITableViewController {
     
     private let cellID = "cellID"
+    private var favItems = [Photo]()
     
     lazy var fetchedhResultController: NSFetchedResultsController<NSFetchRequestResult> = {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: String(describing: Photo.self))
@@ -29,13 +30,16 @@ class PhotoVC: UITableViewController {
         view.backgroundColor = .white
         tableView.register(PhotoCell.self, forCellReuseIdentifier: cellID)
         updateTableContent()
+        tableView.allowsSelection = true
+        
+      
     }
     
     func updateTableContent() {
 
         do {
             try self.fetchedhResultController.performFetch()
-            print("COUNT FETCHED FIRST: \(self.fetchedhResultController.sections?[0].numberOfObjects)")
+            print("COUNT FETCHED FIRST: \(String(describing: self.fetchedhResultController.sections?[0].numberOfObjects))")
         } catch let error  {
             print("ERROR: \(error)")
         }
@@ -67,12 +71,28 @@ class PhotoVC: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! PhotoCell
         
+        cell.favoriteBttn.tag = indexPath.row
+        cell.favoriteBttn.addTarget(self, action: #selector(addFavorite(_:)), for:.touchUpInside)
+         //cell.favoriteBttn.addTarget(self, action: #selector (buttonClicked), for: UIControlEvents.touchUpInside)
+
+        
+        
         if let photo = fetchedhResultController.object(at: indexPath) as? Photo {
             cell.setPhotoCellWith(photo: photo)
         }
         return cell
+
+    }
+    func addFavorite (_ sender: UIButton) {
+        print(sender.tag)
+       
+        
     }
     
+   // func buttonClicked(sender:UIButton)
+    //{
+      //  sender.isSelected = !sender.isSelected;
+   // }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         if let count = fetchedhResultController.sections?.first?.numberOfObjects {
@@ -85,6 +105,12 @@ class PhotoVC: UITableViewController {
         return view.frame.width + 100 //100 = sum of labels height + height of divider line
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let photo = fetchedhResultController.object(at: indexPath) as? Photo {
+            self.favItems.append(photo)
+            print(self.favItems)
+        }
+    }
     private func createPhotoEntityFrom(dictionary: [String: AnyObject]) -> NSManagedObject? {
         
         let context = CoreDataStack.sharedInstance.persistentContainer.viewContext
