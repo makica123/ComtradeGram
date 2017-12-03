@@ -78,7 +78,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
-    func submitLogin(_ sender: Any){
+    @objc func submitLogin(_ sender: Any){
         let photoVC = PhotoVC()
         
         self.present(photoVC, animated: true, completion: nil)
