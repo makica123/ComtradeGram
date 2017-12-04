@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0754276C1FCB5A7500E5EA79 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0754276B1FCB5A7500E5EA79 /* ProfileViewController.swift */; };
+		077D19CC1FCC958000B9280E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077D19CB1FCC958000B9280E /* LoginViewController.swift */; };
 		7B09F2421E68C8F700C8774B /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B09F2411E68C8F700C8774B /* APIService.swift */; };
 		7B4DA3571E6B9DB4008CFF8A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4DA3561E6B9DB4008CFF8A /* Extensions.swift */; };
 		7BD171381E6782130012FF66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD171371E6782130012FF66 /* AppDelegate.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		0754276B1FCB5A7500E5EA79 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		077D19CB1FCC958000B9280E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7B09F2411E68C8F700C8774B /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		7B4DA3561E6B9DB4008CFF8A /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		7BD171341E6782130012FF66 /* CoreDataTutorialPart1Final.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataTutorialPart1Final.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,7 +109,7 @@
 			children = (
 				0754276B1FCB5A7500E5EA79 /* ProfileViewController.swift */,
 				7BD1714F1E6782750012FF66 /* PhotoVC.swift */,
-				C1DDF8821FCC97D40069468B /* LoginViewController.swift */,
+				077D19CB1FCC958000B9280E /* LoginViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -139,12 +141,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = "James Rochabrun";
 				TargetAttributes = {
 					7BD171331E6782130012FF66 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 4NCJS82G4A;
+						DevelopmentTeam = 43E5B5CSA6;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -194,7 +197,7 @@
 				7BD171401E6782130012FF66 /* CoreDataTutorialPart1Final.xcdatamodeld in Sources */,
 				7B09F2421E68C8F700C8774B /* APIService.swift in Sources */,
 				7BD171501E6782750012FF66 /* PhotoVC.swift in Sources */,
-				C1DDF8831FCC97D40069468B /* LoginViewController.swift in Sources */,
+				077D19CC1FCC958000B9280E /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,7 +224,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -229,7 +234,12 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -270,7 +280,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -278,7 +290,12 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -307,12 +324,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4NCJS82G4A;
+				DEVELOPMENT_TEAM = 43E5B5CSA6;
 				INFOPLIST_FILE = CoreDataTutorialPart1Final/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.speedelo.CoreDataTutorialPart1Final;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -320,12 +338,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4NCJS82G4A;
+				DEVELOPMENT_TEAM = 43E5B5CSA6;
 				INFOPLIST_FILE = CoreDataTutorialPart1Final/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.speedelo.CoreDataTutorialPart1Final;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

@@ -9,12 +9,11 @@
 import UIKit
 import CoreData
 
-
-
 class PhotoVC: UITableViewController {
     
     private let cellID = "cellID"
-    private var favItems = [Photo]()
+    private var favItems = [Int]()
+    private var tap:UITapGestureRecognizer!
     
     lazy var fetchedhResultController: NSFetchedResultsController<NSFetchRequestResult> = {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: String(describing: Photo.self))
@@ -30,13 +29,14 @@ class PhotoVC: UITableViewController {
         view.backgroundColor = .white
         tableView.register(PhotoCell.self, forCellReuseIdentifier: cellID)
         updateTableContent()
-        tableView.allowsSelection = true
         
-      
+        tableView.delegate = self
+        tableView.dataSource = self
+        
     }
     
     func updateTableContent() {
-
+        
         do {
             try self.fetchedhResultController.performFetch()
             print("COUNT FETCHED FIRST: \(String(describing: self.fetchedhResultController.sections?[0].numberOfObjects))")
@@ -72,14 +72,18 @@ class PhotoVC: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! PhotoCell
         
         cell.favoriteBttn.tag = indexPath.row
-        cell.favoriteBttn.addTarget(self, action: #selector(addFavorite(_:)), for:.touchUpInside)
-         //cell.favoriteBttn.addTarget(self, action: #selector (buttonClicked), for: UIControlEvents.touchUpInside)
-
-        
+        cell.favoriteBttn.setTitle("♡", for: UIControlState.normal)
         
         if let photo = fetchedhResultController.object(at: indexPath) as? Photo {
             cell.setPhotoCellWith(photo: photo)
+            if(self.favItems.contains(indexPath.row)){
+                cell.favoriteBttn.setTitle("♥︎", for: .normal) 
+            }
         }
+        
+        cell.favoriteBttn.addTarget(self, action: #selector(PhotoVC.addFavorite(_:)), for: .touchUpInside)
+        self.tableView.allowsSelection = true
+        
         return cell
 
     }
@@ -89,10 +93,18 @@ class PhotoVC: UITableViewController {
         
     }
     
-   // func buttonClicked(sender:UIButton)
-    //{
-      //  sender.isSelected = !sender.isSelected;
-   // }
+    @objc func addFavorite(_ sender: UIButton){
+        sender.setTitle("♥︎", for: .normal)
+        if let _ = fetchedhResultController.fetchedObjects![sender.tag] as? Photo {
+            if(self.favItems.contains(sender.tag)){
+                self.favItems = self.favItems.filter{ $0 != sender.tag }
+            }else{
+                self.favItems.append(sender.tag)
+            }
+            
+        }
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         if let count = fetchedhResultController.sections?.first?.numberOfObjects {

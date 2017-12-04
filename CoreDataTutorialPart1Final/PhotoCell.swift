@@ -12,6 +12,7 @@ import UIKit
 
 class PhotoCell: UITableViewCell {
     
+    var favoriteBttn:UIButton!
     let imageBtn = UIImage(named: "srculence") as! UIImage
     let imageBtn1 = UIImage(named:"srculence1") as! UIImage
     
@@ -24,7 +25,7 @@ class PhotoCell: UITableViewCell {
         iv.layer.masksToBounds = true
         return iv
     }()
-    
+
     let authorLabel: UILabel = {
         let label = UILabel()
         label.textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
@@ -36,7 +37,7 @@ class PhotoCell: UITableViewCell {
         label.lineBreakMode = .byWordWrapping
         return label
     }()
-    
+
     let tagsLabel: UILabel = {
         let label = UILabel()
         label.textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
@@ -59,21 +60,20 @@ class PhotoCell: UITableViewCell {
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        isUserInteractionEnabled = false
+        isUserInteractionEnabled = true
         
-        self.favoriteBttn = UIButton.init(frame: CGRect.init(x: 5, y:270, width: 40, height: 40))
-        self.favoriteBttn.setTitle("M", for: UIControlState.normal)
-        self.favoriteBttn.backgroundColor = UIColor.white
+        self.favoriteBttn = UIButton.init(frame: CGRect.init(x: 5, y: 350, width: 50, height: 50))
+        self.favoriteBttn.setTitle("♡", for: UIControlState.normal)
+        self.favoriteBttn.backgroundColor = UIColor.red
+        self.favoriteBttn.titleLabel?.font = UIFont.systemFont(ofSize: 30)
         self.favoriteBttn.layer.cornerRadius = 5
-        self.favoriteBttn.setImage(imageBtn, for: UIControlState.normal)
-        self.favoriteBttn.setImage(imageBtn1, for: UIControlState.selected)
+
         
-    
         addSubview(photoImageview)
         addSubview(authorLabel)
         addSubview(tagsLabel)
         addSubview(dividerLineView)
-        addSubview(self.favoriteBttn)
+        self.addSubview(self.favoriteBttn)
         
         
         photoImageview.topAnchor.constraint(equalTo: topAnchor).isActive = true
