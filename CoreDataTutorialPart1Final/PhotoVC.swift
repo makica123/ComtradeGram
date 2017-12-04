@@ -87,6 +87,8 @@ class PhotoVC: UITableViewController {
         return cell
     }
     
+    //MARK: - User actions
+    
     @objc func addFavorite(_ sender: UIButton){
         sender.setTitle("♥︎", for: .normal)
         if let _ = fetchedhResultController.fetchedObjects![sender.tag] as? Photo {
@@ -98,6 +100,17 @@ class PhotoVC: UITableViewController {
             
         }
     }
+    
+    func openComments(_ sender: UIButton){
+        if let photo = fetchedhResultController.fetchedObjects![sender.tag] as? Photo {
+            let commentsVC = CommentsViewController()
+            commentsVC.photo = photo
+            self.navigationController?.present(commentsVC, animated: true
+                , completion: nil)
+        }
+    }
+    
+    //MARK: - TableView
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         

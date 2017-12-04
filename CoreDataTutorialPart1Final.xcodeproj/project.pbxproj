@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		0754276C1FCB5A7500E5EA79 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0754276B1FCB5A7500E5EA79 /* ProfileViewController.swift */; };
 		077D19CC1FCC958000B9280E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077D19CB1FCC958000B9280E /* LoginViewController.swift */; };
+		07D882F91FD5D31A005A5E58 /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D882F81FD5D319005A5E58 /* CommentsViewController.swift */; };
+		07D882FB1FD5D74D005A5E58 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D882FA1FD5D74D005A5E58 /* CommentCell.swift */; };
+		07D882FD1FD5D89A005A5E58 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D882FC1FD5D89A005A5E58 /* Comment.swift */; };
 		7B09F2421E68C8F700C8774B /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B09F2411E68C8F700C8774B /* APIService.swift */; };
 		7B4DA3571E6B9DB4008CFF8A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4DA3561E6B9DB4008CFF8A /* Extensions.swift */; };
 		7BD171381E6782130012FF66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD171371E6782130012FF66 /* AppDelegate.swift */; };
@@ -25,6 +28,9 @@
 /* Begin PBXFileReference section */
 		0754276B1FCB5A7500E5EA79 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		077D19CB1FCC958000B9280E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		07D882F81FD5D319005A5E58 /* CommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
+		07D882FA1FD5D74D005A5E58 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		07D882FC1FD5D89A005A5E58 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		7B09F2411E68C8F700C8774B /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		7B4DA3561E6B9DB4008CFF8A /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		7BD171341E6782130012FF66 /* CoreDataTutorialPart1Final.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataTutorialPart1Final.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,6 +96,7 @@
 				7BD171531E6792420012FF66 /* Photo+CoreDataClass.swift */,
 				7BD171541E6792420012FF66 /* Photo+CoreDataProperties.swift */,
 				7BD171571E679CE80012FF66 /* CoreDataStack.swift */,
+				07D882FC1FD5D89A005A5E58 /* Comment.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -98,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				7BD171511E6782800012FF66 /* PhotoCell.swift */,
+				07D882FA1FD5D74D005A5E58 /* CommentCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -108,6 +116,7 @@
 				0754276B1FCB5A7500E5EA79 /* ProfileViewController.swift */,
 				7BD1714F1E6782750012FF66 /* PhotoVC.swift */,
 				077D19CB1FCC958000B9280E /* LoginViewController.swift */,
+				07D882F81FD5D319005A5E58 /* CommentsViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -185,14 +194,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07D882FB1FD5D74D005A5E58 /* CommentCell.swift in Sources */,
 				7BD171581E679CE80012FF66 /* CoreDataStack.swift in Sources */,
 				7B4DA3571E6B9DB4008CFF8A /* Extensions.swift in Sources */,
+				07D882FD1FD5D89A005A5E58 /* Comment.swift in Sources */,
 				7BD171561E6792420012FF66 /* Photo+CoreDataProperties.swift in Sources */,
 				7BD171551E6792420012FF66 /* Photo+CoreDataClass.swift in Sources */,
 				0754276C1FCB5A7500E5EA79 /* ProfileViewController.swift in Sources */,
 				7BD171521E6782800012FF66 /* PhotoCell.swift in Sources */,
 				7BD171381E6782130012FF66 /* AppDelegate.swift in Sources */,
 				7BD171401E6782130012FF66 /* CoreDataTutorialPart1Final.xcdatamodeld in Sources */,
+				07D882F91FD5D31A005A5E58 /* CommentsViewController.swift in Sources */,
 				7B09F2421E68C8F700C8774B /* APIService.swift in Sources */,
 				7BD171501E6782750012FF66 /* PhotoVC.swift in Sources */,
 				077D19CC1FCC958000B9280E /* LoginViewController.swift in Sources */,
