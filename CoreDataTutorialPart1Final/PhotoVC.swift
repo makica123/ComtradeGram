@@ -93,6 +93,8 @@ class PhotoVC: UITableViewController {
         
     //}
     
+    //MARK: - User actions
+    
     @objc func addFavorite(_ sender: UIButton){
         sender.setTitle("♥︎", for: .normal)
         if let _ = fetchedhResultController.fetchedObjects![sender.tag] as? Photo {

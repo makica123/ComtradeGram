@@ -60,7 +60,8 @@ class PhotoCell: UITableViewCell {
         v.translatesAutoresizingMaskIntoConstraints = false
         return v
     }()
-
+    
+    
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
