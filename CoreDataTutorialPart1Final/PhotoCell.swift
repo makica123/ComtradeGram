@@ -15,8 +15,9 @@ class PhotoCell: UITableViewCell {
     var favoriteBttn:UIButton!
     let imageBtn = UIImage(named: "srculence") as! UIImage
     let imageBtn1 = UIImage(named:"srculence1") as! UIImage
+    var commentBtn = UIButton ()
     
-    var favoriteBttn: UIButton!
+   // var favoriteBttn: UIButton!
     let photoImageview: UIImageView = {
         let iv = UIImageView()
         iv.contentMode = .scaleAspectFill
@@ -25,6 +26,9 @@ class PhotoCell: UITableViewCell {
         iv.layer.masksToBounds = true
         return iv
     }()
+    
+    
+    //
 
     let authorLabel: UILabel = {
         let label = UILabel()
@@ -62,18 +66,24 @@ class PhotoCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         isUserInteractionEnabled = true
         
-        self.favoriteBttn = UIButton.init(frame: CGRect.init(x: 5, y: 350, width: 50, height: 50))
+        self.favoriteBttn = UIButton.init(frame: CGRect.init(x: 5, y: 270, width: 50, height: 50))
         self.favoriteBttn.setTitle("♡", for: UIControlState.normal)
-        self.favoriteBttn.backgroundColor = UIColor.red
+        //self.favoriteBttn.backgroundColor = UIColor.red
         self.favoriteBttn.titleLabel?.font = UIFont.systemFont(ofSize: 30)
         self.favoriteBttn.layer.cornerRadius = 5
 
+        self.commentBtn = UIButton.init(frame: CGRect.init(x: 50, y: 270, width: 50, height: 50))
+        self.commentBtn.setTitle("💬", for: UIControlState.normal)
+       // self.commentBtn.backgroundColor = UIColor.blue
+        self.commentBtn.titleLabel?.font = UIFont.systemFont(ofSize: 30)
+        self.commentBtn.layer.cornerRadius = 5
         
         addSubview(photoImageview)
         addSubview(authorLabel)
         addSubview(tagsLabel)
         addSubview(dividerLineView)
         self.addSubview(self.favoriteBttn)
+        self.addSubview(self.commentBtn)
         
         
         photoImageview.topAnchor.constraint(equalTo: topAnchor).isActive = true

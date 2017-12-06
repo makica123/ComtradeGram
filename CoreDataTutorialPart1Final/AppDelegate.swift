@@ -26,11 +26,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let photoVC = PhotoVC()
         let profileVC = ProfileViewController()
         let loginVC = LoginViewController()
+        let commentsVC = CommentViewController()
         
         CoreDataStack.sharedInstance.applicationDocumentsDirectory()
         
         self.tabBarController = UITabBarController()
-        self.tabBarController.viewControllers = [UINavigationController(rootViewController: photoVC), UINavigationController(rootViewController: profileVC),
+        self.tabBarController.viewControllers = [UINavigationController(rootViewController: photoVC), UINavigationController(rootViewController: commentsVC),
         loginVC]
         
         let item1 = UITabBarItem(title: "Photos", image: nil, tag: 0)

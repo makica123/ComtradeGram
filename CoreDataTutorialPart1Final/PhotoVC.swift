@@ -87,11 +87,11 @@ class PhotoVC: UITableViewController {
         return cell
 
     }
-    func addFavorite (_ sender: UIButton) {
-        print(sender.tag)
+    //func addFavorite (_ sender: UIButton) {
+       // print(sender.tag)
        
         
-    }
+    //}
     
     @objc func addFavorite(_ sender: UIButton){
         sender.setTitle("♥︎", for: .normal)
@@ -103,8 +103,18 @@ class PhotoVC: UITableViewController {
             }
             
         }
+        
+        func openComments(_sender: UIButton){
+            if let photo = fetchedhResultController.fetchedObjects![sender.tag] as? Photo {
+                
+                let commentsVC = CommentViewController()
+                commentsVC.photo = photo
+                self.navigationController?.present(commentsVC, animated: true, completion: nil)
+            }
+        }
     }
     
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         if let count = fetchedhResultController.sections?.first?.numberOfObjects {
@@ -119,7 +129,7 @@ class PhotoVC: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let photo = fetchedhResultController.object(at: indexPath) as? Photo {
-            self.favItems.append(photo)
+            self.favItems.append(indexPath.row)
             print(self.favItems)
         }
     }
