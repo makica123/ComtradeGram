@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		0754276C1FCB5A7500E5EA79 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0754276B1FCB5A7500E5EA79 /* ProfileViewController.swift */; };
 		077D19CC1FCC958000B9280E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077D19CB1FCC958000B9280E /* LoginViewController.swift */; };
-		07D882F91FD5D31A005A5E58 /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D882F81FD5D319005A5E58 /* CommentsViewController.swift */; };
-		07D882FB1FD5D74D005A5E58 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D882FA1FD5D74D005A5E58 /* CommentCell.swift */; };
 		07D882FD1FD5D89A005A5E58 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D882FC1FD5D89A005A5E58 /* Comment.swift */; };
 		7B09F2421E68C8F700C8774B /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B09F2411E68C8F700C8774B /* APIService.swift */; };
 		7B4DA3571E6B9DB4008CFF8A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4DA3561E6B9DB4008CFF8A /* Extensions.swift */; };
@@ -25,13 +23,12 @@
 		7BD171581E679CE80012FF66 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD171571E679CE80012FF66 /* CoreDataStack.swift */; };
 		C1116E4F1FD5D31E0087F315 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1116E4E1FD5D31E0087F315 /* CommentViewController.swift */; };
 		C1116E511FD5D7560087F315 /* CommentCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1116E501FD5D7560087F315 /* CommentCellTableViewCell.swift */; };
+		C1A8D5EE1FD869D1006552E0 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A8D5ED1FD869D1006552E0 /* CommentCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0754276B1FCB5A7500E5EA79 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		077D19CB1FCC958000B9280E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		07D882F81FD5D319005A5E58 /* CommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
-		07D882FA1FD5D74D005A5E58 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		07D882FC1FD5D89A005A5E58 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		7B09F2411E68C8F700C8774B /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		7B4DA3561E6B9DB4008CFF8A /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -48,6 +45,7 @@
 		7BD171571E679CE80012FF66 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		C1116E4E1FD5D31E0087F315 /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
 		C1116E501FD5D7560087F315 /* CommentCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCellTableViewCell.swift; sourceTree = "<group>"; };
+		C1A8D5ED1FD869D1006552E0 /* CommentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +64,7 @@
 			children = (
 				7BD171361E6782130012FF66 /* CoreDataTutorialPart1Final */,
 				7BD171351E6782130012FF66 /* Products */,
+				C1A8D5E81FD86903006552E0 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				7BD171511E6782800012FF66 /* PhotoCell.swift */,
+				C1A8D5ED1FD869D1006552E0 /* CommentCell.swift */,
 				C1116E501FD5D7560087F315 /* CommentCellTableViewCell.swift */,
 			);
 			name = View;
@@ -123,6 +123,13 @@
 				C1116E4E1FD5D31E0087F315 /* CommentViewController.swift */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		C1A8D5E81FD86903006552E0 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,12 +205,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07D882FB1FD5D74D005A5E58 /* CommentCell.swift in Sources */,
 				7BD171581E679CE80012FF66 /* CoreDataStack.swift in Sources */,
 				7B4DA3571E6B9DB4008CFF8A /* Extensions.swift in Sources */,
 				07D882FD1FD5D89A005A5E58 /* Comment.swift in Sources */,
 				7BD171561E6792420012FF66 /* Photo+CoreDataProperties.swift in Sources */,
 				7BD171551E6792420012FF66 /* Photo+CoreDataClass.swift in Sources */,
+				C1A8D5EE1FD869D1006552E0 /* CommentCell.swift in Sources */,
 				0754276C1FCB5A7500E5EA79 /* ProfileViewController.swift in Sources */,
 				7BD171521E6782800012FF66 /* PhotoCell.swift in Sources */,
 				7BD171381E6782130012FF66 /* AppDelegate.swift in Sources */,
